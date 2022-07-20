@@ -1,5 +1,7 @@
 *{
     font-family:din-2014, sans-serif;
+ 
+
 }
 #cartNavbar{
     background-color: aquamarine;
@@ -34,9 +36,9 @@ h1{
     gap: 10px;
     /* color: red; */
 }
-#rallProducts i{
+#rallProducts li{
    list-style: none;
-   border-bottom:  solid 2px  rgb(244,244,244);;
+   border-bottom:  solid 1px  rgba(0, 0, 0, 0.121);;
 }
 li img{
     width: 98px;
@@ -51,6 +53,7 @@ li img{
     width: 377.475px;
     height: 39px;
     padding: 5px 18px;
+    font-weight: 510;
 }
 .count{
     width: 142.475px;
@@ -173,3 +176,4 @@ text-align: center;
 margin: 5px 0;
 font-weight: 400;
 }
+

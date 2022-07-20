@@ -25,7 +25,7 @@ function display(data){
       freeP.innerHTML =" Congrats! You're eligible for free gift Please select."
       freeGift.append(freeP)
     let totalPriceDiv = document.getElementById("totalPriceDiv")
-    totalPriceDiv.innerHTML = ""
+        totalPriceDiv.innerHTML =""
     let sum =0;
     let allSum =0
      let container = document.getElementById("rallProducts")
@@ -88,7 +88,7 @@ function display(data){
 
               let total = document.createElement("div")
               total.setAttribute("class", "total")
-               totalP = document.createElement("p")
+              let totalP = document.createElement("p")
                totalP.innerText = `₹ ${ele.quantity*ele.price}`
              let spanClose = document.createElement("span")
              spanClose.setAttribute("class","material-icons")
@@ -105,12 +105,22 @@ function display(data){
             sum = sum+ele.quantity
         })
         h1.innerText = `MY BAG(${sum})`
-        let totalPrice= document.createElement("h1")
-           totalPrice.innerHTML =""
-        totalPrice.innerHTML = allSum
-
-            totalPriceDiv.append(totalPrice) 
-        
+        // let totalPrice= document.createElement("h1")
+        //    totalPrice.innerHTML =""
+        // // totalPrice.innerHTML = allSum
+         let totalInnerDiv = document.createElement("div")
+         totalInnerDiv.setAttribute("class","totalInnerDiv")
+            totalInnerDiv.innerHTML = `
+            <div class="goodPoints">
+              
+              <span>You will earn <strong>₹ ${Math.floor(allSum*10/100)} Good Points</strong> as cashback on this order.</span>
+            </div>
+            <div class="totalDisplay">
+              <span>Grand Total</span>
+              <span>&nbsp;<strong> ₹ ${allSum}</strong></span>
+            </div>
+         `
+         totalPriceDiv.appendChild(totalInnerDiv)
 }
 display(arr)
 
@@ -147,3 +157,8 @@ function remove(ele,index){
     display(arr)
 }
 
+let button = document.getElementById("button")
+button.style.cursor = "pointer"
+checkout.addEventListener("click",function(){
+  window.location.href = "address.html"
+})
