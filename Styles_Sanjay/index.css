@@ -451,7 +451,7 @@ ul li:hover .drop5 {
     width: 100%;
     height: 100%;
 }
-body>div:nth-child(5)
+/* body>div:nth-child(5)
 {
     width: 90%;
     height: 300px;
@@ -479,7 +479,7 @@ body>div:nth-child(5)>div:last-child>div{
 body>div:nth-child(5)>div>div>img{
     width: 100%;
     height: 100%;
-}
+} */
 #banking{
     width: 95%;
     margin: auto;
