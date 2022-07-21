@@ -160,5 +160,5 @@ function remove(ele,index){
 let button = document.getElementById("button")
 button.style.cursor = "pointer"
 checkout.addEventListener("click",function(){
-  window.location.href = "address.html"
+  window.location.href = "./Address Page"
 })
