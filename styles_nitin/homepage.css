@@ -6,6 +6,7 @@ body{
 }   
 *{
     box-sizing: border-box;
+    font-family: din-2014, sans-serif;
 }
 .heading{
   text-align: center;

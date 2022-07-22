@@ -5,12 +5,16 @@ let images = (data)=>{
     data.forEach(el => {
         let img1 = document.createElement("img")
         img1.src = el.img1
+        img1.setAttribute("class","img");
         let img2 = document.createElement("img")
         img2.src = el.img2;
+        img2.setAttribute("class","img");
         let img3 = document.createElement("img");
         img3.src = el.img3;
+        img1.setAttribute("class","img");
         let img4 = document.createElement("img")
          img4.src = el.img4
+         img4.setAttribute("class","img");
          document.getElementById("images").append(img1,img2,img3,img4);
     });
 }
