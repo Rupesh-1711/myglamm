@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     font-family: din-2014, sans-serif;
+
+
 }
 
 #display{
@@ -30,7 +32,8 @@
     width: 90%;
 }
 .price{
-    font-size: 30px;
+    
+font-size: 30px;
     display: flex;
     gap: 7%;
     margin-top: 10px;

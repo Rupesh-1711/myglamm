@@ -5,7 +5,8 @@ let productData = [{img:"https://files.myglamm.com/site-images/800x800/Artboard-
 
 
 
-
+// import {navbar} from "../Components/navbar.js"
+// document.getElementById("navbar").innerHTML=navbar();
 
 import {append,productdetails} from "../componants_nitin/script.js"
 let container= document.getElementById("container");
