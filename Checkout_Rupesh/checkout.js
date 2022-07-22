@@ -13,7 +13,7 @@ let obj = {
 }
 
 localStorage.setItem("address", JSON.stringify(obj));
-localStorage.setItem("grandTotal", JSON.stringify(6000));
+localStorage.setItem("grandTotal", JSON.stringify(5334));
 localStorage.setItem("bagItem", JSON.stringify(7));
 
 let grandTotal = JSON.parse(localStorage.getItem("grandTotal"));
@@ -27,16 +27,35 @@ let addressLine2 = `${address.city},${address.state},${address.zip}`
 
 let appendName = document.getElementById("appendName");
 appendName.innerText = nameAppend1
+let apppendAddress = document.getElementById("appendAddress");
+apppendAddress.innerHTML = ` <span>${address.house}, ${address.street}, ${address.landmark}</span>
+<br>
+${address.city}, ${address.state}, ${address.pincode}.`
 
+let appendMobile =document.getElementById('appendMobile');
+appendMobile.innerText = address.mobile
 
-// console.log(addressLine1, addressLine2)
-// Amount Payable
-// let addIt =document.getElementById("addIt")
-//    addIt.append( ` <div>Amount Payable</div> <div style="font-size: 19px;">₹ ${grandTotal}.00</div>`)
+let appendEmail =document.getElementById('appendEamil');
+appendEmail.innerText = address.email
+
  let grandTotalAppend = document.getElementById("grandTotalAppend")
  grandTotalAppend.innerText = `₹ ${grandTotal}.00`
+ console.log(grandTotal)
+     let withoutDiscout = Math.floor((100*grandTotal)/70)
+     console.log(withoutDiscout)
+let mrpAppend = document.getElementById("mrpAppend")
+mrpAppend.innerText = `₹ ${withoutDiscout}.00`
+let mrpDisAppend = document.getElementById("mrpDisAppend")
+mrpDisAppend.innerText = `-₹ ${withoutDiscout-grandTotal}.00`
+
+let goodPointsAppend = document.getElementById("goodPointsAppend")
+goodPointsAppend.innerText = Math.floor((grandTotal*10)/100)
 // append part
 let items = [{img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
+    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
+    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
     {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
