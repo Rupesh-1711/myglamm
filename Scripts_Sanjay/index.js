@@ -1,5 +1,6 @@
-import { navbar } from "../Components/navbar.js";
+import { navbar,footer } from "../Components/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("footer").innerHTML = footer();
 let i=0;
 let id;
 let dataForCarousel = [
@@ -52,3 +53,16 @@ let slideRight=()=>{
       i++;
 }
 document.getElementById("right").addEventListener("click",slideRight)
+let modelButton=document.getElementById("logMe")
+let modelDisplay=document.querySelector(".model-bg")
+modelButton.addEventListener("click",()=>{
+    modelDisplay.classList.add("active-bg")
+})
+document.querySelector(".modelClose").addEventListener("click",()=>{
+  modelDisplay.classList.remove("active-bg")
+})
+let checkUser=document.getElementById("continue")
+checkUser.addEventListener("click",()=>{
+  modelDisplay.classList.remove("active-bg")
+  document.querySelector(".model-bg1").classList.add("active-bg1")
+})
