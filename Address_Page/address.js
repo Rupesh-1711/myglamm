@@ -47,7 +47,7 @@ class Info{
     console.log("ok")
 
      localStorage.setItem("address",JSON.stringify(obj));
-     window.location.href = "./fakecheckout.html";
+     window.location.href = "#";
   }
   else{
       alert("please fill required fields")

@@ -105,6 +105,8 @@ function display(data){
             sum = sum+ele.quantity
         })
         h1.innerText = `MY BAG(${sum})`
+        localStorage.setItem("grandTotal",JSON.stringify(allSum))
+        localStorage.setItem("bagItems",JSON.stringify(sum))
         // let totalPrice= document.createElement("h1")
         //    totalPrice.innerHTML =""
         // // totalPrice.innerHTML = allSum
@@ -121,7 +123,11 @@ function display(data){
             </div>
          `
          totalPriceDiv.appendChild(totalInnerDiv)
+         let grandTotal = JSON.parse(localStorage.getItem("grandTotal")) || []
+let bagItems = JSON.parse(localStorage.getItem("bagItems")) || []
+         console.log(grandTotal,bagItems)
 }
+
 display(arr)
 
 
