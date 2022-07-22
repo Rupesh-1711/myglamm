@@ -1,11 +1,12 @@
-
-body{
+#display{
+    /* margin-top: 17%; */
     width: 85%;
     margin: auto;
-   
-}   
+}
+  
 *{
     box-sizing: border-box;
+    font-family: din-2014, sans-serif;
 }
 .heading{
   text-align: center;
@@ -15,22 +16,22 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
-}
+    
+    }
 .product{
     padding: 25px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     font-size: 20px;
     cursor: pointer;
-    
 }
 .product:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#container div img{
+#container>div>img{
     width: 85%;
 }
-#container div img:hover{
+#container>div>img:hover{
     transform: scale(1.1);
 }
 
@@ -60,7 +61,7 @@ body{
     font-size: 30px;
     margin-top: 30px;
 }
-#conatiner div:hover{
+#container>div:hover{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

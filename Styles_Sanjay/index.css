@@ -1,12 +1,8 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: din-2014, sans-serif;
-}
-body{
-    background-color: rgb(244,244,244);
-}
 #navbar{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: fixed;
@@ -351,9 +347,9 @@ ul li:hover .drop4 {
     font-size: 10px;
     color: grey;
 }
-span{
+/* span{
     /* border: 1px solid red; */
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
     padding: 0px 50px;
 }
@@ -363,7 +359,7 @@ span>p:first-child{
 span>p:last-child{
     font-size: 14px;
     text-decoration: line-through;
-}
+} */ */
 /* END OF COLLECTION */
 /* STUDIO */
 .drop6 ul{
