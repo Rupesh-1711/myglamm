@@ -1,14 +1,7 @@
-let items = [{img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-]
 
-
-localStorage.setItem("data",JSON.stringify(items))
-
+      let removedOrdersArr = JSON.parse(localStorage.getItem("removedOrders")) || [];
     let arr = JSON.parse(localStorage.getItem("data")) || [];
-
+    localStorage.setItem("liveOrders",JSON.stringify(arr))
 
 
 
@@ -105,9 +98,6 @@ function display(data){
             sum = sum+ele.quantity
         })
         h1.innerText = `MY BAG(${sum})`
-        // let totalPrice= document.createElement("h1")
-        //    totalPrice.innerHTML =""
-        // // totalPrice.innerHTML = allSum
          let totalInnerDiv = document.createElement("div")
          totalInnerDiv.setAttribute("class","totalInnerDiv")
             totalInnerDiv.innerHTML = `
@@ -121,6 +111,8 @@ function display(data){
             </div>
          `
          totalPriceDiv.appendChild(totalInnerDiv)
+         localStorage.setItem("grandTotal", JSON.stringify(allSum));
+         localStorage.setItem("bagItem", JSON.stringify(sum));
 }
 display(arr)
 
@@ -132,6 +124,7 @@ function increase(ele,index)
      arr[index] = ele
      display(arr)
     localStorage.setItem("data",JSON.stringify(arr))
+    localStorage.setItem("liveOrders",JSON.stringify(arr))
 
 
 }
@@ -144,21 +137,70 @@ function decrease(ele,index)
      arr = JSON.parse(localStorage.getItem("data")) || [];
      arr[index] = ele
     localStorage.setItem("data",JSON.stringify(arr))
+    localStorage.setItem("liveOrders",JSON.stringify(arr))
     display(arr)
 
     }
 
 }
 
-
 function remove(ele,index){
     arr.splice(index,1)
+    removedOrdersArr.push(ele)
     localStorage.setItem("data",JSON.stringify(arr))
+    localStorage.setItem("removedOrders",JSON.stringify(removedOrdersArr))
     display(arr)
 }
 
-let button = document.getElementById("button")
-button.style.cursor = "pointer"
-checkout.addEventListener("click",function(){
-  window.location.href = "address.html"
-})
+// let button = document.getElementById("progress-prev")
+// button.style.cursor = "pointer"
+
+
+//ProgressStepbar
+
+const progressBar = document.getElementById("progress-bar");
+const progressNext = document.getElementById("progress-next");
+const progressPrev = document.getElementById("progress-prev");
+progressNext.style.cursor = "pointer";
+const steps = document.querySelectorAll(".step");
+let active = 1;
+//console.log(steps)
+progressNext.addEventListener("click", () => {
+    active++;
+    localStorage.setItem("active",JSON.stringify(active));
+    if (active > steps.length) {
+      active = steps.length;
+    }
+    updateProgress();
+  });
+  
+  progressPrev.addEventListener("click", () => {
+    active--;
+    localStorage.setItem("active",JSON.stringify(active));
+    if (active < 1) {
+      active = 1;
+    }
+    updateProgress();
+  });
+  const updateProgress = () => {
+    // toggle active class on list items
+    steps.forEach((step, i) => {
+      if (i < active) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+    // set progress bar width  
+    progressBar.style.width = 
+      ((active -1) / (steps.length -1)) * 100 + "%";
+    // enable disable prev and next buttons
+    if (active === 1) {
+      progressPrev.disabled = true;
+    } else if (active === steps.length) {
+      progressNext.disabled = true;
+    } else {
+      progressPrev.disabled = false;
+      progressNext.disabled = false;
+    }
+  };

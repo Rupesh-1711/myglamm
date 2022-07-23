@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link id="favicon" rel="icon" href="https://www.myglamm.com/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./checkout.css">
     <style>
@@ -12,7 +13,33 @@
     </style>
 </head>
 <body>
-    <nav></nav>
+    <div id="maindiv">
+        <div id="container">
+            <div id="img"><img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+        </div>
+        <div id="progress">
+            <div id="progress-bar" style="width: 66.6667%;"></div>
+            <ul id="progress-num">
+                <span><div>
+                    SHOPPING BAG
+                </div>
+                <li class="step active"></li></span>
+             <span>
+                 <div>SELECT ADDRESS
+                </div>
+                <li class="step" style="background-color: black;"></li>
+             </span>
+            <span><div>CHECKOUT</div>
+                <li class="step" style="background-color: black;"></li></span>
+             <span><div id="laststep">PAYMENT</div><li class="step"></li>
+             </span>
+              </ul>
+          </div>
+          <div id="user"><img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+            <div>User Name</div>
+            </div>
+        </div>
+    </div>
     <h1>Checkout</h1>
     <div id="checkoutMain">
         <div id="leftDiv">
@@ -77,7 +104,7 @@
             </div>
             <div class="mrp">
                 <div>Discount on MRP</div>
-                <div id="mrpDisAppend">-₹ 2325.00</div>
+                <div id="mrpDisAppend">-₹ 0.00</div>
             </div>
             <p>Apply Promo Code</p>
             <form action="" class="applyForm">
@@ -95,7 +122,7 @@
             </div>
             <div class="addIt">
                 <div>Amount Payable</div>
-                <div style="font-size: 19px;" id="grandTotalAppend">₹ 2325.00</div>
+                <div style="font-size: 19px;" id="grandTotalAppend">₹ 0.00</div>
             </div>
             <div class="mrp">
                 <div>You Saved</div>
@@ -103,10 +130,10 @@
             </div>
             <div class="mrp">
                 <div>You wil earn</div>
-                <div id="goodPointsAppend">892.00</div>
+                <div id="goodPointsAppend">0.00</div>
             </div>
             <div>
-                <a href="#">
+                <a href="../Payment_Rupesh/payment.html">
                     <button class="btnPayment">PRODEED TO PAYMENT</button>
                 </a>
             </div>

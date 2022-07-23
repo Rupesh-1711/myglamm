@@ -1,20 +1,4 @@
-let obj = {
-    name: "RUPESH SANJAY PATIL",
-    mobile: "9172051168",
-    email: "rupeshpatil3066@gmail.com",
-    location: "home",
-    house: "Flat:1,Patil house",
-    street: "Langade galli",
-    neighbourhood: "Omkar",
-    pincode: "416211",
-    city: "Kolhapur",
-    state: "Maharashtra",
-    landmark: "Near temple"
-}
 
-localStorage.setItem("address", JSON.stringify(obj));
-localStorage.setItem("grandTotal", JSON.stringify(5334));
-localStorage.setItem("bagItem", JSON.stringify(7));
 
 let grandTotal = JSON.parse(localStorage.getItem("grandTotal"));
 let bagItem = JSON.parse(localStorage.getItem("bagItem"));
@@ -51,18 +35,18 @@ mrpDisAppend.innerText = `-₹ ${withoutDiscout-grandTotal}.00`
 let goodPointsAppend = document.getElementById("goodPointsAppend")
 goodPointsAppend.innerText = Math.floor((grandTotal*10)/100)
 // append part
-let items = [{img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-    {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
-    {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
-]
+// let items = [{img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
+//     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+//     {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
+//     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+//     {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:1},
+//     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+//     {img:"https://files.myglamm.com/site-images/200x200/Soiree-(1).jpg",price:1295,title:"MANISH MALHOTRA 9 IN 1 EYESHADOW PALETTE - SOIRÉE",quantity:3},
+//     {img:"https://files.myglamm.com/site-images/original/Artboard-1-(1).jpg",price:239,title:"MYGLAMM SUPERFOODS ONION & MORINGA SHAMPOO - 200ML",quantity:1},
+// ]
 
 
-localStorage.setItem("data",JSON.stringify(items))
+// localStorage.setItem("data",JSON.stringify(items))
 
     let arr = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -137,3 +121,53 @@ function display(data){
 
 }
 display(arr)
+
+
+
+
+//ProgressStepbar
+
+const progressBar = document.getElementById("progress-bar");
+const progressNext = document.getElementById("progress-next");
+const progressPrev = document.getElementById("progress-prev");
+progressNext.style.cursor = "pointer";
+const steps = document.querySelectorAll(".step");
+let active = 1;
+//console.log(steps)
+progressNext.addEventListener("click", () => {
+    active++;
+    if (active > steps.length) {
+      active = steps.length;
+    }
+    updateProgress();
+  });
+  
+  progressPrev.addEventListener("click", () => {
+    active--;
+    if (active < 1) {
+      active = 1;
+    }
+    updateProgress();
+  });
+  const updateProgress = () => {
+    // toggle active class on list items
+    steps.forEach((step, i) => {
+      if (i < active) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+    // set progress bar width  
+    progressBar.style.width = 
+      ((active -1) / (steps.length -1)) * 100 + "%";
+    // enable disable prev and next buttons
+    if (active === 1) {
+      progressPrev.disabled = true;
+    } else if (active === steps.length) {
+      progressNext.disabled = true;
+    } else {
+      progressPrev.disabled = false;
+      progressNext.disabled = false;
+    }
+  };
