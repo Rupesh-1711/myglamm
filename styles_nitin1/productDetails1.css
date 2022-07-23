@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: din-2014, sans-serif;
+
+
+}
+
+#display{
+    width: 85%;
+    margin: auto;
+}
+
+#container{
+    display: flex;
+    margin: auto;
+    gap: 20px;
+    margin-top:20px ;
+}
+#images{
+    width: 7%;
+}
+#image{
+  width: 35%;
+}
+#detail{
+    width: 50%;
+}
+#images img{
+    width: 100%;
+}
+#image img{
+    width: 90%;
+}
+.price{
+    
+font-size: 30px;
+    display: flex;
+    gap: 7%;
+    margin-top: 10px;
+}
+.rating{
+    font-size: 20px;
+    display: flex;
+    gap: 7%;
+    
+}
+.text{
+     margin-top: 0;
+    }
+.star{
+    width: 30px;
+    height: 20px;
+    margin-left: -35px;
+    border-right: 2px solid gray;
+}
+.point{
+    font-size: 17px;
+    background-color: beige;
+    padding: 5px;
+    font-weight: bold;
+}
+.btn{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#heading{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
