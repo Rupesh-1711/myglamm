@@ -1,5 +1,9 @@
 let dataFromLs = JSON.parse(localStorage.getItem("userDetails"))||[];
-import { navbar, footer } from "../Components/navbar.js";
+let permanentData=JSON.parse(localStorage.getItem("userDetails_P"))||[];
+console.log(dataFromLs)
+console.log(permanentData)
+import { navbar, footer,displayUserName } from "../Components/navbar.js";
+
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML = footer();
 let i = 0;
@@ -66,9 +70,12 @@ checkUser.addEventListener("click", () => {
   let number1 = document.getElementById("number").value;
   if (number1 != "") 
   {
-      let filtered = dataFromLs.filter((el) => {
-      return el.mobile == number1;
+      let filtered = permanentData.filter((el) => {
+        console.log(el.mobile)
+      return +el.mobile == +number1;
     });
+    console.log(filtered)
+    console.log(number1)
     if (filtered.length >= 1) 
     {
       clearInterval(id1);
@@ -81,7 +88,7 @@ checkUser.addEventListener("click", () => {
         ).innerText = `ENTER OTP SENT ON +91 ${number}`;
         id1 = setInterval(() => {
           count--;
-          console.log(count);
+          // console.log(count);
           document.getElementById("resendOTP").innerText = `00:${count}`;
           if (count == 0) {
             document.getElementById("resendOTP").innerText = `RESEND OTP`;
@@ -89,12 +96,23 @@ checkUser.addEventListener("click", () => {
           }
         }, 1000);
         document.getElementById("verify").addEventListener("click",()=>{
-              // document.getElementById("username").innerText=filtered[0].name
-              let nameArray=[]
-              nameArray.push(filtered[0].name)
-              localStorage.setItem("name",JSON.stringify(nameArray))
-              displayUserName()
-              document.querySelector(".model-bg1").classList.remove("active-bg1");
+              let e=document.getElementById("1").value
+              let f=document.getElementById("1").value
+              let g=document.getElementById("1").value
+              let h=document.getElementById("1").value
+              if(e!=""&&f!=""&&g!=""&&h!="")
+              {
+                let nameArray=[]
+                nameArray.push(filtered[0].name)
+                localStorage.setItem("name",JSON.stringify(nameArray))
+                displayUserName()
+                document.querySelector(".model-bg1").classList.remove("active-bg1");
+                window.location.reload()
+              }
+             else
+             {
+               alert("Enter Valid OTP!!")
+             }
         })
     } 
     else 
@@ -129,8 +147,16 @@ checkUser.addEventListener("click", () => {
                 let emailId=document.getElementById("femail").value;
                 let details=new createObj(fullName,emailId,number)
                 dataFromLs.push(details)
+                permanentData.push(details)
                 localStorage.setItem("userDetails",JSON.stringify(dataFromLs))
+                localStorage.setItem("userDetails_P",JSON.stringify(permanentData))
+                let nameArray=[]
+                nameArray.push(details.name)
+                localStorage.setItem("name",JSON.stringify(nameArray))
                 alert("Account Created!!")
+                document.querySelector(".model-bg2").classList.remove("active-bg2");
+                displayUserName()
+                window.location.reload()
         } else {
           alert("Plese Enter Valid OTP!!");
         }
@@ -148,7 +174,7 @@ document.getElementById("resendOTP").addEventListener("click", () => {
   count = 20;
   id1 = setInterval(() => {
     count--;
-    console.log(count);
+    // console.log(count);
     document.getElementById("resendOTP").innerText = `00:${count}`;
     if (count == 0) {
       document.getElementById("resendOTP").innerText = `RESEND OTP`;
@@ -172,7 +198,7 @@ document.getElementById("resendOTP1").addEventListener("click", () => {
   count = 20;
   id1 = setInterval(() => {
     count--;
-    console.log(count);
+    // console.log(count);
     document.getElementById("resendOTP1").innerText = `00:${count}`;
     if (count == 0) {
       document.getElementById("resendOTP1").innerText = `RESEND OTP`;
@@ -186,54 +212,12 @@ document.querySelector(".modelClose2").addEventListener("click", () => {
   document.querySelector(".model-bg2").classList.remove("active-bg2")
   document.getElementById("number").value = "";
 });
-let displayUserName=()=>{
-  let username=JSON.parse(localStorage.getItem("name"))||[]
-  if(username.length==1)
-  {
-    document.getElementById("newData").innerHTML=""
-    let container=document.getElementById("newData")
-    let image=document.createElement("img")
-    image.src=`https://media.istockphoto.com/vectors/shopping-bag-icon-store-logo-in-simple-line-style-vector-id1351258710?b=1&k=20&m=1351258710&s=612x612&w=0&h=wbaj9phrANTYYwaIzRmgYCuC0xb3tMZiAs_uKGaI97o=`
-   
-    let selectTag=document.createElement("select")
-    let option1=document.createElement("option")
-    option1.innerText=username[0]
-    let option2=document.createElement("option")
-    option2.innerText="My Profile"
-    option2.value="myprofile"
-    let option3=document.createElement("option")
-    option3.innerText="My Orders"
-    let option4=document.createElement("option")
-    option4.innerText="My Dashboard"
-    let option5=document.createElement("option")
-    option5.innerText="My GlammXO Party"
-    let option6=document.createElement("option")
-    option6.innerText="LOGOUT"
-    option6.value="logout"
-    option6.setAttribute("class","editopt")
-    selectTag.append(option1,option2,option3,option4,option5,option6)
-    selectTag.setAttribute("class","options")
-    container.append(image,selectTag)
-   
-  }
-}
 displayUserName()
 function createObj(n,e,m)
 {
     this.name=n;
     this.emailId=e
-    this.mobile=m
+    this.mobile=+m
+    this.newUser=false;
 }
-let changOptions=document.querySelector(".options")
-changOptions.addEventListener("change",()=>{
-    if(changOptions.value=="myprofile")
-    {
-       window.location.href="myprofile.html"
-    }
-    if(changOptions.value=="logout")
-    {
-      localStorage.setItem("userDetails",JSON.stringify([]))
-      localStorage.setItem("name",JSON.stringify([]))
-      window.location.reload()
-    }
-})
+

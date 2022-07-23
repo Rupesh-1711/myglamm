@@ -27,7 +27,7 @@ let navbar=()=>{
 </div>
 <div id="bottomNav">
     <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="index_day-4.html">HOME</a></li>
         <li><a href="#">MAKEUP</a>
             <div class="drop">
                 <ul>
@@ -412,4 +412,65 @@ let footer=()=>{
     </div>
   </div>`
 }
-export {navbar,footer}
+  let displayUserName=()=>{
+        let username=JSON.parse(localStorage.getItem("name"))||[]
+        if(username.length==1)
+        {
+          document.getElementById("newData").innerHTML=""
+          let container=document.getElementById("newData")
+          let image=document.createElement("img")
+          image.src=`https://media.istockphoto.com/vectors/shopping-bag-icon-store-logo-in-simple-line-style-vector-id1351258710?b=1&k=20&m=1351258710&s=612x612&w=0&h=wbaj9phrANTYYwaIzRmgYCuC0xb3tMZiAs_uKGaI97o=`
+          let div=document.createElement("div")
+          let name=document.createElement("p")
+          name.innerText=username[0]
+          let image2=document.createElement("img")
+          image2.src=`https://i.pinimg.com/736x/08/11/de/0811defb8f07599ea89b498e1ef4254f.jpg`
+          let image3=document.createElement("img")
+          image3.src=`https://www.myglamm.com/images/no_user_yellow.png`
+          div.append(image3,name,image2)
+          div.setAttribute("class","profile")
+          container.setAttribute("id","newName")
+          container.append(image,div)
+          let dropdown=document.createElement("div")
+          let myorder=document.createElement("p")
+          myorder.innerText="My Order"
+          // myorder.setAttribute("id","gotoOrder")
+          myorder.addEventListener("click",()=>{
+             window.location.href="myorders.html"
+          })
+          let myprofile=document.createElement("p")
+          myprofile.innerText="My Profile"
+          myprofile.addEventListener("click",()=>{
+             window.location.href="myprofile.html"
+          })
+          // myprofile.setAttribute("id","gotoprofile")
+          let mydash=document.createElement("p")
+          mydash.innerText="My dashboard"  
+          let myglamm=document.createElement("p")
+          myglamm.innerText="MyGlammXO Party"
+          let logout=document.createElement("button")
+          logout.innerText="Logout"
+          logout.addEventListener("click",()=>{
+             removeTemp()
+          })
+          dropdown.append(myprofile,myorder,mydash,myglamm,logout)
+          dropdown.setAttribute("class","newDrop")
+          document.querySelector(".profile").append(dropdown)  
+        }
+      
+      let profile=document.querySelector(".profile")
+      if(profile!=null)
+      {
+        document.querySelector(".profile").addEventListener("click",()=>{
+          document.querySelector(".newDrop").classList.toggle("dropMenu")
+       })
+      }
+    }
+    let removeTemp=()=>{
+        localStorage.setItem("userDetails",JSON.stringify([]))
+        localStorage.setItem("name",JSON.stringify([]))
+        window.location.reload()
+        window.location.href="index_day-4.html"
+      }
+  
+export {navbar,footer,displayUserName}

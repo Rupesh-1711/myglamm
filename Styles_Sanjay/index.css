@@ -7,6 +7,7 @@
 body{
     background-color: rgb(244,244,244);
 }
+/* CSS FOR NAVBAR */
 #navbar{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: fixed;
@@ -117,6 +118,7 @@ body{
     /* border: 1px solid red; */
     height: 60px;
     width: 100%;
+    position: relative;
 }
 #bottomNav>ul{
     display: inline-flex;
@@ -132,7 +134,7 @@ body{
 ul li{
     float: left;
     list-style: none;
-    position: relative;
+    /* position: relative; */
     font-weight: 500;
 }
 ul li a{
@@ -156,15 +158,16 @@ ul li:hover .drop {
 .drop{
     display: flex;
     position: absolute;
-    left: -150%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
+    /* width: 91vw; */
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .space{
     margin-top: 10px;
@@ -177,15 +180,18 @@ ul li:hover .drop {
 .drop1{
     display: flex;
     position: absolute;
-    left: -265%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
+    /* width: unset; */
+    /* width: 91vw; */
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
 }
 ul li:hover .drop1 {
     display: flex;
@@ -234,15 +240,15 @@ span>p:last-child{
 .drop2{
     display: flex;
     position: absolute;
-    left: -455%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 ul li:hover .drop2 {
     display: flex;
@@ -256,15 +262,15 @@ ul li:hover .drop2 {
 .drop3{
     display: flex;
     position: absolute;
-    left: -388%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 ul li:hover .drop3 {
     display: flex;
@@ -315,15 +321,15 @@ span>p:last-child{
 .drop4{
     display: flex;
     position: absolute;
-    left: -698%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 ul li:hover .drop4 {
     display: flex;
@@ -374,16 +380,16 @@ span>p:last-child{
 .drop6{
     display: flex;
     position: absolute;
-    left: -712%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;
     gap: 80px;
     height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 ul li:hover .drop6 {
     display: flex;
@@ -393,9 +399,8 @@ ul li:hover .drop6 {
 .drop5{
     display: flex;
     position: absolute;
-    left: -1048%;
-    width: unset;
-    width: 91vw;
+    left: 3%;
+    right: 3%;
     margin: auto;
     border: 1px solid red;
     display: none;
@@ -403,11 +408,13 @@ ul li:hover .drop6 {
     padding: 10px;
     gap: 80px;
     height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 ul li:hover .drop5 {
     display: flex;
 }
 /* END OF REWARDS */
+/* END OF NAVBAR */
 #Carousel{
     width: 100%;
     height: 350px;
@@ -420,15 +427,12 @@ ul li:hover .drop5 {
 }
 #anim{
   position: relative;
-  /* z-index: -5; */
 }
-#anim>div:first-child{
+/* #anim>div:first-child{
     position: relative;
-    /* z-index: -5; */
-}
+} */
 #anim>div:last-child>button{
     position: absolute;
-    z-index: 0;
     top: 50%;
     z-index: 3;
     height: 40px;
@@ -444,43 +448,43 @@ ul li:hover .drop5 {
 #anim>div:last-child>button:first-child{
     left: 1%;
 }
+#spotlight
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#spotlight>div:first-child>p{
+    background-image: linear-gradient(to bottom,white,rgb(255,151,151));
+    width: 190px;
+    margin: auto;
+}
+#spotlight>div:last-child{
+   display: grid;
+   width: 100%;
+   grid-template-columns: repeat(3,0.5fr);
+   grid-template-rows: auto;
+   gap: 0px 30px;
+   margin-top: 20px;
+}
+#spotlight>div:last-child>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#spotlight img{
+    width: 100%;
+    height: 100%;
+}
 .common
 {
     width: 85%;
     height: 300px;
     margin: auto;
     margin-top: 50px;
+    /* border: 1px solid red; */
 }
 .common>img{
-    width: 100%;
-    height: 100%;
-}
-body>div:nth-child(5)
-{
-    width: 90%;
-    height: 300px;
-    margin: auto;
-    margin-top: 60px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-body>div:nth-child(5)>div:first-child>p{
-    background-image: linear-gradient(to bottom,white,rgb(255,151,151));
-    width: 190px;
-    margin: auto;
-}
-body>div:nth-child(5)>div:last-child{
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   grid-template-rows: auto;
-   gap: 0px 30px;
-   margin-top: 20px;
-}
-body>div:nth-child(5)>div:last-child>div{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-body>div:nth-child(5)>div>div>img{
     width: 100%;
     height: 100%;
 }
@@ -707,8 +711,8 @@ body>div:nth-child(5)>div>div>img{
     height: 100%;
 }
 #video{
-   width: 100%;
-   height: 800px;
+   width:   100%;
+   /* border: 1px solid red; */
    margin: auto;
    margin-top: 20px;
    position: relative;
@@ -716,7 +720,11 @@ body>div:nth-child(5)>div>div>img{
    overflow-y: hidden;
 }
 #video>video{
-    object-fit: fill;
+    width:   100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* border: 1px solid red; */
 }
 #onvideo{
     position: absolute;
@@ -747,6 +755,7 @@ body>div:nth-child(5)>div>div>img{
     margin-top: 30px;
     cursor: pointer;
 }
+/* CSS FOR FOOTER */
 #footer{
     background-color: white;
     margin-top: 0px;
@@ -854,6 +863,7 @@ body>div:nth-child(5)>div>div>img{
     line-height: 18px;
     font-weight: 500;
 }
+/* END OF CSS FOR FOOTER */
 .model-bg{
     position: fixed;
     top: 0;
@@ -1164,12 +1174,80 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     line-height: 15px;
 }
-#newData>img{
-   /* width: 100px; */
-   width: 20px;
-   height: 20px;
+#newData{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
 }
-.options{
+#newName{
+    /* border: 1px solid teal; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+#newName>img{
+    /* border: 1px solid teal; */
+    margin-left: 30px;
+}
+.profile>img:last-child{
+    /* border: 1px solid orange; */
+    margin-left: 30px;
+}
+.profile{
+    width: 60%;
+    /* border: 1px solid orchid; */
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.profile>p{
+    font-size: 12px;
+    margin-left: 1px;
+    /* border: 1px solid olivedrab; */
+}
+.profile>img{
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid red; */
+}
+.newDrop{
+    position: absolute;
+    top: 90%;
+    right: 15%;
+    z-index: 1000;
+    display: none;
+}
+.dropMenu{
+    display: block;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    font-family: din-2014 - 700;
+    font-size: 13px;
+    line-height: 25px;
+    width: 160px;
+}
+.dropMenu>p:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+.dropMenu>button{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(229,229,229);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* .options{
     border: none;
     outline: none;
     padding-right: -40px;
@@ -1183,4 +1261,4 @@ input::-webkit-inner-spin-button {
     background-color: grey;
     text-align: center;
     width: 10px;
-}
+} */
