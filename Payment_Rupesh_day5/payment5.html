@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link id="favicon" rel="icon" href="https://www.myglamm.com/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="./payment5.css">
+   <style>
+       
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="container">
+            <div id="img"><img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+        </div>
+        <div id="progress">
+            <div id="progress-bar" style="width: 100%;"></div>
+            <ul id="progress-num">
+                <span><div>
+                    SHOPPING BAG
+                </div>
+                <li class="step active" style="background-color: black;"></li></span>
+             <span>
+                 <div>SELECT ADDRESS
+                </div>
+                <li class="step" style="background-color: black;"></li>
+             </span>
+            <span><div>CHECKOUT</div>
+                <li class="step" style="background-color: black;"></li></span>
+             <span><div id="laststep">PAYMENT</div><li class="step" style="background-color: black;"></li>
+             </span>
+              </ul>
+          </div>
+          <div id="user"><img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+            <div>User Name</div>
+            </div>
+        </div>
+    </div>
+       <h1>Payment</h1>
+    <div id="paymentMainDiv">
+     
+        <div class="payLeftDiv">
+            <h6>PAYMENT METHOD</h6>
+            <div class="credit">
+                <span class="material-icons">
+                    credit_card
+                    </span>
+                    <span  class="creditPos">Credit or Debit Card</span>
+            </div>
+            <div class="credit">
+                <span class="material-icons ">
+                    language
+                    </span>
+                    <span  class="creditPos">Net Banking</span>
+            </div>
+            <div class="credit">
+                <span class="material-icons">
+                    payments
+                    </span>
+                    <span  class="creditPos">Google Pay/PhonePay</span>
+            </div>
+            <div class="credit">
+                <span class="material-icons">
+                    account_balance_wallet
+                    </span>
+                    <span  class="creditPos">Wallets</span>
+            </div>
+            <div class="credit">
+                <span class="material-icons">
+                    money
+                    </span>
+                    <span  class="creditPos">Cash On Delivery</span>
+            </div>
+        </div>
+        <div class="payRightDiv">
+             <div class="PayableAmountDiv">
+                <div class="nameAmount">AMOUNT PAYABLE</div>
+                <div class="findalAmount">₹333.00</divc>
+             </div>
+        </div>
+        <div class="newCard">
+            <h6>New Card</h6>
+            <div class="cardNum">
+                <div class="cardTitle">Card Number :</div>
+                <div><input type="tel" maxlength="19" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+                     placeholder="XXXX - XXXX - XXXX - XXXX" id="cardNumber" required></div>
+            </div>
+            <div class="cardNum">
+                <div class="cardTitle">Cardholder's Name :</div>
+                <div><input type="text" placeholder="eg. Rupesh Patil" id="cardHolderName"></div>
+            </div>
+            <div class="validity">
+                <div class="validityTitle cardTitle" >
+                    Validity:
+                </div>
+                <div class="MonthCCV">
+                    <div class="MonthYear">
+                        <div><input type="tel" maxlength="2" placeholder="   MM" id="month"></div>
+                        <div><input type="tel"  maxlength="2" placeholder="    YY" id="year"></div>
+                    </div>
+                    <div class="CVV">
+                        <div class="cardTitle">CVV:</div>
+                        <div><input type="password" maxlength="3" placeholder="    ***" id="password"></div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div id="loader"><button class="btnPay" id="payMoney">Pay₹333.00</button></div>
+    </div>  
+</body>
+</html>
+
+<script src="./payment5.js">
+   
+
+</script>

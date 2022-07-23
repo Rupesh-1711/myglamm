@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Address</title>
+    <link id="favicon" rel="icon" href="https://www.myglamm.com/favicon.ico">
+    <link rel="stylesheet" href="./address5.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="container">
+            <div id="img"><img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+        </div>
+        <div id="progress">
+            <div id="progress-bar" style="width: 33.3333%;"></div>
+            <ul id="progress-num">
+                <span><div>
+                    SHOPPING BAG
+                </div>
+                <li class="step active" ></li></span>
+             <span>
+                 <div>SELECT ADDRESS
+                </div>
+                <li class="step" style="background-color: black;"></li>
+             </span>
+            <span><div>CHECKOUT</div>
+                <li class="step" ></li></span>
+             <span><div id="laststep">PAYMENT</div><li class="step"></li>
+             </span>
+              </ul>
+          </div>
+          <div id="user"><img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+            <div>User Name</div>
+            </div>
+        </div>
+    </div>
+    <div id="rmainDiva">
+         <div id="rmainInDiv">
+            <div id="addressDiv">
+                 <h4>Shipping Address</h4>
+                 <form action="" id="rform">
+                    <div id="mainFormDiv">
+
+                        <div class="formDiv1">
+                            <div><input type="text" id="fName" placeholder="Name*" required></div>
+                            <div><input type="number" id="fMobile" placeholder="Mobile Number*" required></div>
+                            <div><input type="text" id="fEmail" placeholder="Email Address"></div>
+                        </div>
+
+                        <div class="formDiv2">
+                            <div><select name="" id="select">
+                                <option value="other">Other</option>
+                                <option value="home">Home</option>
+                                <option value="Office">Office</option>
+                            </select></div>
+                            <div><input type="text" id="fHouse" placeholder="Flat no. / House no. / Apt Name*" required></div>
+                            <div><input type="text" id="fStreet" placeholder="Street name*" required></div>
+                            <div><input type="text" id="fnigh" placeholder="Neighbourhood*" required></div>
+                        </div>
+
+                        <div class="formDiv3">
+                            <div><input type="number" id="fPincode" placeholder="Pincode*" required></div>
+                            <div><input type="text" id="fCity" placeholder="City" ></div>
+                            <div><input type="text" id="fState" placeholder="State"></div>
+                            <div><input type="text" id="fLandmark" placeholder="Landmark"></div>
+                        </div>
+                        <div class="markDef">
+                            <input type="checkbox" id="MarkDefault">
+                            <label for="MarkDefault">Mark as default</label>
+                        </div>
+                    </div>
+                 </form>
+                 <div id="buttons">
+                    <button id="back">BACK</button>
+                    <button id="continue1">CONTINUE</button>
+                 </div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+
+<script src="./address5.js">
+
+
+</script>

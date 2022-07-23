@@ -1,0 +1,287 @@
+*{
+    font-family: sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+#paymentMainDiv{
+
+    width: 1120px;
+    height: 653.250px;
+    padding-bottom: 30px;
+    /* border:  1px solid red; */
+   margin: 0px auto 0px auto;
+   display: flex;
+}
+.payLeftDiv{
+ 
+     width: 250px;
+     height:331.400px;
+     padding: 0px 15px;
+     /* border:  1px solid rgb(1, 1, 1); */
+}
+.payRightDiv{
+    
+    width: 810px;
+     height:567.250px;
+     padding: 0px 15px;
+     /* border:  1px solid rgb(16, 24, 101); */
+}
+h1{
+    /* width: 1120px; */
+    height: 33px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #333333;
+    margin: 24px 0px 29px 0px;
+   
+    text-align: center;
+}
+.credit{
+    /* position:absolute; */
+    width: 189px;
+    height: 25px;
+    padding: 14px 15px 11px 15px;
+    margin-right: 0px;
+    display: block;
+font-size: 14px;
+border: 1px solid  rgb(255, 255, 255);
+line-height: 24px;
+}
+.credit:hover{
+    /* position:absolute; */
+    width: 189px;
+    height: 24px;
+    padding: 14px 15px 11px 15px;
+    margin-right: 0px;
+    display: block;
+    border: 1px solid  #000;
+    color: #000;
+    background-color: rgba(223,189,80,.1);
+font-size: 14px;
+line-height: 24px;
+}
+.creditPos{
+    /* position: relative; */
+    bottom:6px;
+    margin-left: 15px;
+}
+h6{
+    width: 250px;
+    height: 15.4px;
+    font-size: 14px;
+    margin: 10px 0px 25px;
+}
+.material-icons{
+  font-size: 18px;
+  font: weight 0;
+  color: #909090;
+}
+.PayableAmountDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 778px;
+    height: 27px;
+    padding: 20px 15px;
+    margin: 0px 0px 20px 0px;
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgba(223,189,80,.1);
+}
+.cardNum{
+    display: flex;
+    justify-content: space-between;
+    width: 810px;
+    height: 80px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.cardNum input{
+    width: 581px;
+    height: 34px;
+    padding: 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background-color: rgb(247 247 247);
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 300;
+}
+
+.cardTitle{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 1.4rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.validity{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 145px;
+    width: 810px;
+    height: 80px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.MonthCCV{
+    display: flex;
+    justify-content: space-between;
+    gap:316px;
+}
+
+.MonthYear{
+    display: flex;
+    gap: 10px;
+   
+}
+.MonthYear input{
+    width: 54px;
+    height: 34px;
+    padding: 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background-color: rgb(247 247 247);
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 300;
+}
+.CVV{
+    display: flex;
+    gap:5px;
+}
+.CVV input{
+    width: 54px;
+    height: 34px;
+    padding: 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background-color: rgb(247 247 247);
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: 300;
+}
+.btnPay{
+  width: 200px;
+  padding: 17px;
+margin-top: 90px;
+height: 60px;
+font-size: 14px;
+line-height: 14px;
+font-weight: 800;
+cursor:pointer;
+color: white;
+background-color: rgb(19, 18, 18);
+border-radius: 2px;
+border-color:rgb(59, 59, 59) ;
+}
+
+input[type=number] {
+-moz-appearance: textfield;
+} 
+
+
+
+/* Navbar CSS ////////////////////// */
+
+
+#progress {
+    position: relative;
+    margin-bottom: 30px;   
+    width: 50%;
+  }
+  #progress-bar {
+    position: absolute;
+    background: lightseagreen;
+    height: 5px;
+    width: 0%;
+    top: 60%;
+    left: 0;
+  }
+  #progress-num {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /* border:2px solid red; */
+    justify-content: space-between;
+  }
+  #progress-num::before {
+    content: "";
+    background-color: lightgray;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    z-index: -1;
+  }
+  #progress-num .step {
+    border: 3px solid lightgray;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;    
+    position: relative;
+    z-index: 1;
+  }
+  #progress-num .step.active {
+    border-color: lightseagreen;
+    background-color: black;
+    color: #fff;
+  }
+
+
+  #container{
+      display: flex;
+      align-items: center;
+     width:85%;
+     margin: auto;
+      justify-content: space-around;
+  }
+  #img img{
+      width: 70%;
+  }
+  #user>img{
+      width: 15%;
+      height: 38%;
+     
+  }
+  #user>div{
+     align-items: center;
+     margin-top: 7px;
+  }
+  #user{
+      display: flex;
+      width: 20%;
+      text-align: center;
+      justify-content: center;
+  }
+  .step:last-child{
+      text-align: right;
+  }
+  span>div{
+      text-align: center;
+      /* border: 2px solid red; */
+     margin-right: -45px;
+  }
+  #laststep{
+      text-align: center;
+  }
+  #maindiv{
+    /* box-shadow: rgba(226,226,226) 0px 25px 20px -20px;
+    box-shadow: 0 3px 4px 0rgba(0,0,0,.15); */
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 15%);
+    /* margin-top: 20px; */
+    color: #909090;
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  

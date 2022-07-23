@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link id="favicon" rel="icon" href="https://www.myglamm.com/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./checkout5.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="container">
+            <div id="img"><img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+        </div>
+        <div id="progress">
+            <div id="progress-bar" style="width: 66.6667%;"></div>
+            <ul id="progress-num">
+                <span><div>
+                    SHOPPING BAG
+                </div>
+                <li class="step active"></li></span>
+             <span>
+                 <div>SELECT ADDRESS
+                </div>
+                <li class="step" style="background-color: black;"></li>
+             </span>
+            <span><div>CHECKOUT</div>
+                <li class="step" style="background-color: black;"></li></span>
+             <span><div id="laststep">PAYMENT</div><li class="step"></li>
+             </span>
+              </ul>
+          </div>
+          <div id="user"><img src="https://www.myglamm.com/images/no_user_yellow.png" alt="">
+            <div>User Name</div>
+            </div>
+        </div>
+    </div>
+    <h1>Checkout</h1>
+    <div id="checkoutMain">
+        <div id="leftDiv">
+            <div class="addressInfo"><h6>SHIPPING ADDRESS</h6>
+             <div class="addressDetails">
+                <!-- name in h5 -->
+                <h5 id="appendName"></h5>
+               <address id="appendAddress">
+                <!-- <span>Kolhapur, Maharashtra, 416211</span>
+                <br>
+                <span>Kolhapur, Maharashtra, 416211</span> -->
+               </address>
+               <div class="contactD">
+                <div class="mobileN">
+                    <span class="material-icons" style="color:#909090;" >
+                        call
+                        </span>
+                    <span style="margin-bottom:10px" id="appendMobile">
+                        <!-- 9172051168 -->
+                    </span>
+                </div>
+                <div class="mobileN">
+                    <span class="material-icons" style="color:#909090;" >
+                        mail
+                        </span>
+                    <span style="margin-bottom:10px" id="appendEamil">
+                        <!-- rupeshpatil5116@gmail.com -->
+                    </span>
+                </div>
+                <div class="btnDiv"><button><a href="#">Change</a></button></div>
+               </div>
+             </div>
+             <div class="deliveryCar">
+                <span class="material-icons" style="color:#909090;"">
+                    local_shipping
+                    </span>
+                    <span>
+                        <strong style="padding:10px;">Expected Date </strong> 30-Jul-2022
+                    </span>
+             </div>
+             <div class="billingAddress">
+                  <h6>BILLING ADDRESS</h6>  
+                  <div id="billingInnerDiv">
+                    <label style="font-size: 18px;" for="">Same as Shipping Address</label> <span><strong style="font-size:14px;margin-left:10px">Change</strong></span>
+                  </div>
+             </div>
+             <div class="orderDetails">
+                 <h6>YOUR ORDER</h6>
+             </div>
+                <div id="rallProducts">
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class ="rigthDiv">
+            <h6>Order Summary</h6>
+            <div class="mrp">
+                <div>MRP</div>
+                <div id="mrpAppend">₹ 0.00</div>
+            </div>
+            <div class="mrp">
+                <div>Discount on MRP</div>
+                <div id="mrpDisAppend">-₹ 0.00</div>
+            </div>
+            <p>Apply Promo Code</p>
+            <form action="" class="applyForm">
+                <img src="https://www.myglamm.com/images/discount.svg" class="disIcon" alt="">
+                <input type="textarea" class="applyTextArea" placeholder="PROMO CODE" autocapitalize="true" spellcheck="false" autocomplete="false" value="MASAI30">
+                <button class="applidebtn">APPLIED</button>
+            </form>
+            <div class="mrp bottomDiv">
+                <div>Discount <span>MASAI</span></div>
+                <div>(-₹ 0.00)</div>
+            </div>
+            <div class="mrp">
+                <div>Discount on MRP</div>
+                <div>FREE</div>
+            </div>
+            <div class="addIt">
+                <div>Amount Payable</div>
+                <div style="font-size: 19px;" id="grandTotalAppend">₹ 0.00</div>
+            </div>
+            <div class="mrp">
+                <div>You Saved</div>
+                <div>-₹ 0.00</div>
+            </div>
+            <div class="mrp">
+                <div>You wil earn</div>
+                <div id="goodPointsAppend">0.00</div>
+            </div>
+            <div>
+                <a href="../Payment_Rupesh_day5/payment5.html">
+                    <button class="btnPayment">PRODEED TO PAYMENT</button>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
+<script src="./checkout5.js">
+
+
+</script>
