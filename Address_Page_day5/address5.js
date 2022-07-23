@@ -2,7 +2,7 @@
 let back = document.getElementById("back")
 back.style.cursor = "pointer"
 back.addEventListener("click", function () {
-    window.location.href = "../Rupesh_Cart/cart.html"
+    window.location.href = "../Rupesh_cart_day5/cart5.html"
 })
 
 let continue1 = document.getElementById("continue1")
@@ -47,7 +47,7 @@ function getData(event) {
         console.log("ok")
 
         localStorage.setItem("address", JSON.stringify(obj));
-        window.location.href = "../Checkout_Rupesh/checkout.html";
+        window.location.href = "../Checkout_Rupesh_day5/checkout5.html";
     }
     else {
         alert("please fill required fields")
