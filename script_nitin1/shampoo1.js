@@ -5,7 +5,7 @@ let shampoodata = [{img:"https://files.myglamm.com/site-images/800x800/Artboard-
 
 //{img:"",img1:"",img2:"",img3:"",img4:"",title:"",use:"",price:"",cutPrice:"",rating:"",ratingCount:"",quantity:1}
 
-import {append,productdetails} from "../componants_nitin/script.js"
+import {append,productdetails} from "../componants_nitin1/script1.js"
 let container= document.getElementById("container");
 append(shampoodata,container);
 productdetails(el);

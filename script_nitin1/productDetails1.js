@@ -71,7 +71,7 @@ data.forEach(el => {
     let hdg = document.createElement("p")
     hdg.innerText= `HOME / HAIR CARE / ${el.title}`
     hdg.addEventListener("click",function(){
-        window.location.href="index.html"
+        window.location.href="index_Sanjay-5.html"
     })
     document.getElementById("heading").append(hdg)
 

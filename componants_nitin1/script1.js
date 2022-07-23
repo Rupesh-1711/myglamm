@@ -36,7 +36,7 @@ let productdetails=(el)=>{
    let arr = [];
    arr.push(el)
    localStorage.setItem("Inproduct",JSON.stringify(arr));
-   window.location.href= "productDetails.html"
+   window.location.href= "productDetails1.html"
    
 };
 

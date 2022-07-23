@@ -8,7 +8,7 @@ let productData = [{img:"https://files.myglamm.com/site-images/800x800/Artboard-
 // import {navbar} from "../Components/navbar.js"
 // document.getElementById("navbar").innerHTML=navbar();
 
-import {append,productdetails} from "../componants_nitin/script.js"
+import {append,productdetails} from "../componants_nitin1/script1.js"
 let container= document.getElementById("container");
 append(productData,container);
 productdetails(el);
