@@ -92,5 +92,5 @@ let storedata= (el)=>{
  
 }
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index.html"
+    window.location.href="index_Sanjay-5.html"
 })

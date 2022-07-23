@@ -13,5 +13,5 @@ let container= document.getElementById("container");
 append(productData,container);
 productdetails(el);
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index.html"
+    window.location.href="index_Sanjay-5.html"
 })
