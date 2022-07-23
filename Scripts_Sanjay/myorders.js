@@ -71,5 +71,5 @@ let displayLive=()=>{
 }
 window.addEventListener("load",displayLive)
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index_day-4.html"
+    window.location.href="index_day-5.html"
 })
