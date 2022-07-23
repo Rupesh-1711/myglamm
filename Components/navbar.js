@@ -27,7 +27,7 @@ let navbar=()=>{
 </div>
 <div id="bottomNav">
     <ul>
-        <li><a href="index_day-4.html">HOME</a></li>
+        <li><a href="index_day-5.html">HOME</a></li>
         <li><a href="#">MAKEUP</a>
             <div class="drop">
                 <ul>
