@@ -40,9 +40,9 @@
   width: 300px; 
   overflow: hidden;
   text-overflow: ellipsis; 
-  font-weight: bold;
-  margin-top: 35px;
-  font-size: 25px;
+  font-weight: 600;
+  margin-top: 40px;
+  font-size: 20px;
 }
 .use{
     margin: 4px 0 0;
@@ -75,6 +75,20 @@
     
 }
 .heading1{
+    display: flex;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
     text-align: center;
   font-weight: bold;
+   gap: 3px;
+}
+.heading1>p:nth-child(1){
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.heading1>p:nth-child(2){
+    font-weight: 600;
+    font-size: 14px;
 }

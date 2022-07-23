@@ -70,21 +70,27 @@ data.forEach(el => {
     point.setAttribute("class","point")
     let hdg = document.createElement("p")
     hdg.innerText= `HOME / HAIR CARE / ${el.title}`
+    hdg.addEventListener("click",function(){
+        window.location.href="index.html"
+    })
     document.getElementById("heading").append(hdg)
 
     document.getElementById("detail").append(title,use,div,div1,text,btn,point)
 
 });
-let arr =JSON.parse(localStorage.getItem("addToCart"))|| [];
+let arr =JSON.parse(localStorage.getItem("data"))|| [];
 let storedata= (el)=>{
     
    if(arr.includes(el)){
        alert("This product is already in the Cart")
    }else{
     arr.push(el)
-    localStorage.setItem("addToCart",JSON.stringify(arr)); 
+    localStorage.setItem("data",JSON.stringify(arr)); 
     alert ("Product added to the cart successfully")
     //    window.location.href= "productDetails.html"
    }
  
 }
+document.getElementById("home").addEventListener("click",()=>{
+    window.location.href="index.html"
+})
