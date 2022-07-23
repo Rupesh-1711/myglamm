@@ -2,7 +2,7 @@ let dataFromLs = JSON.parse(localStorage.getItem("userDetails"))||[];
 let permanentData=JSON.parse(localStorage.getItem("userDetails_P"))||[];
 console.log(dataFromLs)
 console.log(permanentData)
-import { navbar, footer,displayUserName } from "../Components/navbar.js";
+import { navbar, footer,displayUserName } from "../Components_5/navbar_Sanjay.js";
 
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("footer").innerHTML = footer();

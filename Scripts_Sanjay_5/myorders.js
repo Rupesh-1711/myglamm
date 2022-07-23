@@ -1,4 +1,4 @@
-import { navbar, footer,displayUserName } from "../Components/navbar.js";
+import { navbar, footer,displayUserName } from "../Components_5/navbar_Sanjay.js";
 document.getElementById("navbar").innerHTML=navbar();
 document.getElementById("footer").innerHTML=footer();
 displayUserName()
@@ -71,5 +71,5 @@ let displayLive=()=>{
 }
 window.addEventListener("load",displayLive)
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index_day-5.html"
+    window.location.href="index_Sanjay-5.html"
 })

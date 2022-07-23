@@ -27,7 +27,7 @@ let navbar=()=>{
 </div>
 <div id="bottomNav">
     <ul>
-        <li><a href="index_day-5.html">HOME</a></li>
+        <li><a href="index_Sanjay-5.html">HOME</a></li>
         <li><a href="#">MAKEUP</a>
             <div class="drop">
                 <ul>
@@ -441,7 +441,7 @@ let footer=()=>{
           let myprofile=document.createElement("p")
           myprofile.innerText="My Profile"
           myprofile.addEventListener("click",()=>{
-             window.location.href="myprofile.html"
+             window.location.href="myprofile_Sanjay.html"
           })
           // myprofile.setAttribute("id","gotoprofile")
           let mydash=document.createElement("p")
@@ -470,7 +470,7 @@ let footer=()=>{
         localStorage.setItem("userDetails",JSON.stringify([]))
         localStorage.setItem("name",JSON.stringify([]))
         window.location.reload()
-        window.location.href="index_day-4.html"
+        window.location.href="index_Sanjay-5.html"
       }
   
 export {navbar,footer,displayUserName}
