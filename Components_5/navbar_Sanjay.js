@@ -21,7 +21,7 @@ let navbar=()=>{
         </div>
     </div>
     <div id="newData">
-        <img src="https://media.istockphoto.com/vectors/shopping-bag-icon-store-logo-in-simple-line-style-vector-id1351258710?b=1&k=20&m=1351258710&s=612x612&w=0&h=wbaj9phrANTYYwaIzRmgYCuC0xb3tMZiAs_uKGaI97o=" alt="Error">
+        <img id="cart" src="https://media.istockphoto.com/vectors/shopping-bag-icon-store-logo-in-simple-line-style-vector-id1351258710?b=1&k=20&m=1351258710&s=612x612&w=0&h=wbaj9phrANTYYwaIzRmgYCuC0xb3tMZiAs_uKGaI97o=" alt="Error">
         <img id="logMe" src="https://icon-library.com/images/white-profile-icon/white-profile-icon-19.jpg" alt="Error">
     </div>
 </div>
@@ -91,12 +91,12 @@ let navbar=()=>{
                 <div class="drop11">
                     <ul>
                         <li><a style="color: #ff9797; font-weight: 700;" href="#">Hair Care</a></li>
-                        <li><a href="#">Shampoo</a></li>
-                        <li><a href="#">Conditioner</a></li>
-                        <li><a href="#">Hair Oil</a></li>
-                        <li><a href="#">Serum</a></li>
-                        <li><a href="#">Hair Mask</a></li>
-                        <li><a href="#">Combos</a></li>
+                        <li><a href="shampoo1.html">Shampoo</a></li>
+                        <li><a href="condiotioner1.html">Conditioner</a></li>
+                        <li><a href="hairOil1.html">Hair Oil</a></li>
+                        <li><a href="securm1.html">Serum</a></li>
+                        <li><a href="hairmask1.html">Hair Mask</a></li>
+                        <li><a href="combs1.html">Combos</a></li>
                     </ul>
                 </div>
                 <div class="drop12">
@@ -421,6 +421,7 @@ let footer=()=>{
           let image=document.createElement("img")
           image.src=`https://media.istockphoto.com/vectors/shopping-bag-icon-store-logo-in-simple-line-style-vector-id1351258710?b=1&k=20&m=1351258710&s=612x612&w=0&h=wbaj9phrANTYYwaIzRmgYCuC0xb3tMZiAs_uKGaI97o=`
           let div=document.createElement("div")
+          image.setAttribute("id","cart")
           let name=document.createElement("p")
           name.innerText=username[0]
           let image2=document.createElement("img")

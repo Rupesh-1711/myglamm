@@ -1,10 +1,12 @@
 
+let nameforcart=JSON.parse(localStorage.getItem("name"))||[]
+document.getElementById("nameTocart").innerText=nameforcart[0];
 
 let grandTotal = JSON.parse(localStorage.getItem("grandTotal"));
 let bagItem = JSON.parse(localStorage.getItem("bagItem"));
 let address = JSON.parse(localStorage.getItem("address"));
 console.log(grandTotal, bagItem, address)
-let nameAppend1 = address.name;
+let nameAppend1 = nameforcart[0];;
 let addressLine1 = `${address.house},${address.street},${address.landmark}`;
 let addressLine2 = `${address.city},${address.state},${address.zip}`
 
@@ -130,44 +132,45 @@ display(arr)
 const progressBar = document.getElementById("progress-bar");
 const progressNext = document.getElementById("progress-next");
 const progressPrev = document.getElementById("progress-prev");
-progressNext.style.cursor = "pointer";
+// progressNext.style.cursor = "pointer";
 const steps = document.querySelectorAll(".step");
 let active = 1;
 //console.log(steps)
-progressNext.addEventListener("click", () => {
-    active++;
-    if (active > steps.length) {
-      active = steps.length;
-    }
-    updateProgress();
-  });
+// progressNext.addEventListener("click", () => {
+//     active++;
+//     if (active > steps.length) {
+//       active = steps.length;
+//     }
+//     updateProgress();
+//   });
   
-  progressPrev.addEventListener("click", () => {
-    active--;
-    if (active < 1) {
-      active = 1;
-    }
-    updateProgress();
-  });
-  const updateProgress = () => {
-    // toggle active class on list items
-    steps.forEach((step, i) => {
-      if (i < active) {
-        step.classList.add("active");
-      } else {
-        step.classList.remove("active");
-      }
-    });
-    // set progress bar width  
-    progressBar.style.width = 
-      ((active -1) / (steps.length -1)) * 100 + "%";
-    // enable disable prev and next buttons
-    if (active === 1) {
-      progressPrev.disabled = true;
-    } else if (active === steps.length) {
-      progressNext.disabled = true;
-    } else {
-      progressPrev.disabled = false;
-      progressNext.disabled = false;
-    }
-  };
+//   progressPrev.addEventListener("click", () => {
+//     active--;
+//     if (active < 1) {
+//       active = 1;
+//     }
+//     updateProgress();
+//   });
+//   const updateProgress = () => {
+//     // toggle active class on list items
+//     steps.forEach((step, i) => {
+//       if (i < active) {
+//         step.classList.add("active");
+//       } else {
+//         step.classList.remove("active");
+//       }
+//     });
+//     // set progress bar width  
+//     progressBar.style.width = 
+//       ((active -1) / (steps.length -1)) * 100 + "%";
+//     // enable disable prev and next buttons
+//     if (active === 1) {
+//       progressPrev.disabled = true;
+//     } else if (active === steps.length) {
+//       progressNext.disabled = true;
+//     } else {
+//       progressPrev.disabled = false;
+//       progressNext.disabled = false;
+//     }
+//   };
+

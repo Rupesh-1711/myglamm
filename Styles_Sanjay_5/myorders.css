@@ -399,7 +399,7 @@ ul li:hover .drop6 {
     left: 3%;
     right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;

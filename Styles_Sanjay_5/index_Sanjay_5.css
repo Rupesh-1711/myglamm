@@ -207,6 +207,7 @@ ul li:hover .drop1 {
     border: 1px solid rgb(224, 216, 216);
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 }
 .drop12>div>img{
    width: 85%;
@@ -219,7 +220,7 @@ ul li:hover .drop1 {
     font-size: 10px;
     color: grey;
 }
-span{
+ span{
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-evenly;
@@ -286,6 +287,7 @@ ul li:hover .drop3 {
     border: 1px solid rgb(224, 216, 216);
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 }
 .drop32>div>img{
    width: 85%;
@@ -345,6 +347,7 @@ ul li:hover .drop4 {
     border: 1px solid rgb(224, 216, 216);
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 }
 .drop42>div>img{
    width: 85%;
@@ -402,7 +405,7 @@ ul li:hover .drop6 {
     left: 3%;
     right: 3%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     background-color: white;
     padding: 10px;

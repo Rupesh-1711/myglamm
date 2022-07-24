@@ -31,7 +31,7 @@ document.getElementById("comp").addEventListener("click",()=>{
     }
     else
     {
-
+            
     }
 })
 document.getElementById("liv").addEventListener("click",()=>{

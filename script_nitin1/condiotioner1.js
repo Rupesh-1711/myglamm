@@ -10,9 +10,20 @@ let cdata = [{img:"https://files.myglamm.com/site-images/800x800/Passion-Fruit--
 import {append,productdetails} from "../componants_nitin1/script1.js"
 let container= document.getElementById("container");
 append(cdata,container);
-productdetails(el);
-document.getElementById("home").addEventListener("click",()=>{
+// productdetails(el);
+
+ import { navbar,displayUserName,footer } from "../Components_5/navbar_Sanjay.js";
+document.getElementById("navbar").innerHTML=navbar()
+document.getElementById("footer").innerHTML=footer()
+displayUserName()
+document.getElementById("cart").addEventListener("click",()=>{
+    window.location.href="./Rupesh_cart_day5/cart5.html"
+ })
+ document.getElementById("home").addEventListener("click",()=>{
     window.location.href="index_Sanjay-5.html"
 })
+document.getElementById("cart").addEventListener("click",()=>{
+    window.location.href="./Rupesh_cart_day5/cart5.html"
+ })
 
 

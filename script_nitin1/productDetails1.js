@@ -94,3 +94,10 @@ let storedata= (el)=>{
 document.getElementById("home").addEventListener("click",()=>{
     window.location.href="index_Sanjay-5.html"
 })
+import { navbar,displayUserName,footer } from "../Components_5/navbar_Sanjay.js";
+document.getElementById("navbar").innerHTML=navbar()
+document.getElementById("footer").innerHTML=footer()
+displayUserName()
+document.getElementById("cart").addEventListener("click",()=>{
+    window.location.href="./Rupesh_cart_day5/cart5.html"
+ })

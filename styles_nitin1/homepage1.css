@@ -1,6 +1,6 @@
 #display{
     /* margin-top: 17%; */
-    width: 85%;
+    width: 100%;
     margin: auto;
 }
   
@@ -11,12 +11,14 @@
 .heading{
   text-align: center;
   font-weight: bold;
+  margin-top: 190px;
 }
 #container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
-    
+    padding-left: 20px;
+    padding-right: 20px;
     }
 .product{
     padding: 25px;
@@ -91,4 +93,594 @@
 .heading1>p:nth-child(2){
     font-weight: 600;
     font-size: 14px;
+}
+/* CSS FOR NAVBAR */
+#navbar{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 5;
+}
+#topNav{
+    display: flex;
+    background-color: rgb(254,232,232);
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+#topNav>div:first-child>div{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+#topNav>div:first-child{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-left: 6%;
+    gap: 20px;
+}
+#topNav>div:first-child>h4{
+    color: rgb(255,151,151);
+    font-size: 12px;
+}
+#topNav>div:nth-child(2){
+    width: 12%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 6%;
+    font-size: 14px;
+    cursor: pointer;
+}
+#middleNav{
+    display: flex;
+    /* border: 1px solid teal; */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+#middleNav>div:first-child{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-left: 8%;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+#middleNav>div:first-child>img{
+    width: 30%;
+}
+#middleNav>div:first-child>div{
+    width: 68%;
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: rgb(246,246,246);
+    padding-left: 10px;
+    gap: 15px;
+}
+#middleNav>div:first-child>div>input{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(246,246,246);
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 10px;
+}
+#middleNav>div:first-child>div>button{
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#middleNav>div:first-child>div>button>img{
+    width: 25px;
+    height: 25px;
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#middleNav>div:nth-child(2){
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 50px;
+    margin-right: 8%;
+}
+#middleNav>div:nth-child(2)>img{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+#bottomNav{
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+#bottomNav>ul{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    /* border: 1px solid teal; */
+    width: 100%;
+    float: left;
+    margin: auto;
+    margin-top: 20px;
+}
+ul li{
+    float: left;
+    list-style: none;
+    /* position: relative; */
+    font-weight: 500;
+}
+ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    padding: 5px 5px;
+}
+.drop ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+ul li a:hover{
+    border-bottom: 2px solid rgb(255,151,151);
+}
+ul li:hover .drop {
+    display: flex;
+}
+.drop{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    /* width: 91vw; */
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.space{
+    margin-top: 10px;
+}
+.drop1 ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.drop1{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    /* width: unset; */
+    /* width: 91vw; */
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+ul li:hover .drop1 {
+    display: flex;
+}
+.drop12{
+    display: grid;
+    grid-template-columns: repeat(4,0.6fr);
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    line-height: 20px;
+}
+.drop12>div{
+    border: 1px solid rgb(224, 216, 216);
+    text-align: center;
+    padding: 5px;
+}
+.drop12>div>img{
+   width: 85%;
+}
+.drop12 img+p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.drop12 p+p{
+    font-size: 10px;
+    color: grey;
+}
+#navbar span{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 50px;
+}
+#navbar span>p:first-child{
+    font-weight: 600;
+}
+#navbar span>p:last-child{
+    font-size: 14px;
+    text-decoration: line-through;
+}
+.drop2 ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.drop2{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+ul li:hover .drop2 {
+    display: flex;
+}
+/* SANITIZING CARE */
+.drop3 ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.drop3{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+ul li:hover .drop3 {
+    display: flex;
+}
+.drop32{
+    display: grid;
+    grid-template-columns: repeat(4,0.6fr);
+    grid-template-rows: 280px;
+    gap: 10px 10px;
+    line-height: 20px;
+}
+.drop32>div{
+    border: 1px solid rgb(224, 216, 216);
+    text-align: center;
+    padding: 5px;
+}
+.drop32>div>img{
+   width: 85%;
+}
+.drop32 img+p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.drop32 p+p{
+    font-size: 10px;
+    color: grey;
+}
+#navbar span{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 50px;
+}
+#navbar span>p:first-child{
+    font-weight: 600;
+}
+#navbar span>p:last-child{
+    font-size: 14px;
+    text-decoration: line-through;
+}
+/* END OF SANITIZING CARE */
+/* COLLECTION */
+.drop4 ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.drop4{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+ul li:hover .drop4 {
+    display: flex;
+}
+.drop42{
+    display: grid;
+    grid-template-columns: repeat(3,0.6fr);
+    grid-template-rows: 280px;
+    gap: 10px 10px;
+    line-height: 20px;
+}
+.drop42>div{
+    border: 1px solid rgb(224, 216, 216);
+    text-align: center;
+    padding: 5px;
+}
+.drop42>div>img{
+   width: 85%;
+}
+.drop42 img+p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.drop42 p+p{
+    font-size: 10px;
+    color: grey;
+}
+#navbar span{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 50px;
+}
+#navbar span>p:first-child{
+    font-weight: 600;
+}
+#navbar span>p:last-child{
+    font-size: 14px;
+    text-decoration: line-through;
+}
+/* END OF COLLECTION */
+/* STUDIO */
+.drop6 ul{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.drop6{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+ul li:hover .drop6 {
+    display: flex;
+}
+/* END OF STUDIO */
+/* REWARDS */
+.drop5{
+    display: flex;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    gap: 80px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+ul li:hover .drop5 {
+    display: flex;
+}
+/* END OF REWARDS */
+/* END OF NAVBAR */
+/* CSS FOR FOOTER */
+#footer{
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 40px;
+}
+#top{
+    width: 90%;
+    /* border: 1px solid teal; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+}
+#top>div>p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 10px;
+}
+#top>div>p:hover{
+    color: #d4a204;
+    cursor: pointer;
+}
+#top>div>p:first-child{
+    font-size: 14px;
+    color: grey;
+    font-weight: 600;
+    line-height: 15px;
+}
+#bottom{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+#bottom>div{
+    /* border: 1px solid teal; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#bottom>div>div:last-child{
+    /* border: 1px solid green; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 400;
+}
+#bottom>div:last-child>div>div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 1px solid orchid; */
+}
+#bottom>div:last-child>div>div>img{
+    width: 110px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#bottom>div>div:nth-child(2){
+   /* border: 1px solid olivedrab; */
+   display: flex;
+   width: 30%;
+   justify-content: space-evenly;
+   align-items: center;
+}
+#bottom>div>div:nth-child(2)>p{
+    padding-right: 20px;
+    border-right: 1.5px solid black;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+#bottom>div>div:first-child{
+     display: flex;
+     width: 34%;
+     /* border: 1px solid red; */
+     height: 40px;
+}
+#bottom>div>div:first-child>input{
+    width: 65.38%;
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: din-2014,sans-serif;
+    line-height: 20px;
+}
+#bottom>div>div:first-child>button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 1px 3px;
+    font-weight: 400;
+}
+#bottom>p{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+/* END OF CSS FOR FOOTER */
+#newData{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+}
+#newName{
+    /* border: 1px solid teal; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+#newName>img{
+    /* border: 1px solid teal; */
+    margin-left: 30px;
+}
+.profile>img:last-child{
+    /* border: 1px solid orange; */
+    margin-left: 30px;
+}
+.profile{
+    width: 60%;
+    /* border: 1px solid orchid; */
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.profile>p{
+    font-size: 12px;
+    margin-left: 1px;
+    /* border: 1px solid olivedrab; */
+}
+.profile>img{
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid red; */
+}
+.newDrop{
+    position: absolute;
+    top: 90%;
+    right: 15%;
+    z-index: 1000;
+    display: none;
+}
+.dropMenu{
+    display: block;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    font-family: din-2014 - 700;
+    font-size: 13px;
+    line-height: 25px;
+    width: 160px;
+}
+.dropMenu>p:hover{
+    cursor: pointer;
+    font-weight: 600;
+}
+.dropMenu>button{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(229,229,229);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
 }

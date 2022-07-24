@@ -220,4 +220,6 @@ function createObj(n,e,m)
     this.mobile=+m
     this.newUser=false;
 }
-
+document.getElementById("cart").addEventListener("click",()=>{
+   window.location.href="./Rupesh_cart_day5/cart5.html"
+})

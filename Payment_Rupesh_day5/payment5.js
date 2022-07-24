@@ -17,7 +17,7 @@ payMoney.addEventListener("click",function(){
    if( inputNumber.length==19 &&inputName!="" && month>0 && month<=12 && year >=22){
      alert("Order Placed successfully")
      localStorage.setItem("completedOrders",JSON.stringify(arr))
-     window.location.href = "index.html"
+     window.location.href = "../index_Sanjay-5.html"
    }
    else
    {
@@ -30,47 +30,49 @@ payMoney.addEventListener("click",function(){
 
 //ProgressStepbar
 
-const progressBar = document.getElementById("progress-bar");
-const progressNext = document.getElementById("progress-next");
-const progressPrev = document.getElementById("progress-prev");
-progressNext.style.cursor = "pointer";
-const steps = document.querySelectorAll(".step");
-let active = 1;
-//console.log(steps)
-progressNext.addEventListener("click", () => {
-    active++;
-    if (active > steps.length) {
-      active = steps.length;
-    }
-    updateProgress();
-  });
+// const progressBar = document.getElementById("progress-bar");
+// const progressNext = document.getElementById("progress-next");
+// const progressPrev = document.getElementById("progress-prev");
+// progressNext.style.cursor = "pointer";
+// const steps = document.querySelectorAll(".step");
+// let active = 1;
+// //console.log(steps)
+// progressNext.addEventListener("click", () => {
+//     active++;
+//     if (active > steps.length) {
+//       active = steps.length;
+//     }
+//     updateProgress();
+//   });
   
-  progressPrev.addEventListener("click", () => {
-    active--;
-    if (active < 1) {
-      active = 1;
-    }
-    updateProgress();
-  });
-  const updateProgress = () => {
-    // toggle active class on list items
-    steps.forEach((step, i) => {
-      if (i < active) {
-        step.classList.add("active");
-      } else {
-        step.classList.remove("active");
-      }
-    });
-    // set progress bar width  
-    progressBar.style.width = 
-      ((active -1) / (steps.length -1)) * 100 + "%";
-    // enable disable prev and next buttons
-    if (active === 1) {
-      progressPrev.disabled = true;
-    } else if (active === steps.length) {
-      progressNext.disabled = true;
-    } else {
-      progressPrev.disabled = false;
-      progressNext.disabled = false;
-    }
-  };
+//   progressPrev.addEventListener("click", () => {
+//     active--;
+//     if (active < 1) {
+//       active = 1;
+//     }
+//     updateProgress();
+//   });
+//   const updateProgress = () => {
+//     // toggle active class on list items
+//     steps.forEach((step, i) => {
+//       if (i < active) {
+//         step.classList.add("active");
+//       } else {
+//         step.classList.remove("active");
+//       }
+//     });
+//     // set progress bar width  
+//     progressBar.style.width = 
+//       ((active -1) / (steps.length -1)) * 100 + "%";
+//     // enable disable prev and next buttons
+//     if (active === 1) {
+//       progressPrev.disabled = true;
+//     } else if (active === steps.length) {
+//       progressNext.disabled = true;
+//     } else {
+//       progressPrev.disabled = false;
+//       progressNext.disabled = false;
+//     }
+//   };
+let nameforcart=JSON.parse(localStorage.getItem("name"))||[]
+document.getElementById("nameTocart").innerText=nameforcart[0];
