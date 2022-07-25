@@ -1,12 +1,6 @@
 
       let removedOrdersArr = JSON.parse(localStorage.getItem("removedOrders")) || [];
     let arr = JSON.parse(localStorage.getItem("data")) || [];
-    localStorage.setItem("liveOrders",JSON.stringify(arr))
-
-
-
-
-
 function display(data){
     let total= document.querySelector(".totalItems")
      total.innerHTML = ""
@@ -124,7 +118,7 @@ function increase(ele,index)
      arr[index] = ele
      display(arr)
     localStorage.setItem("data",JSON.stringify(arr))
-    localStorage.setItem("liveOrders",JSON.stringify(arr))
+   
 
 
 }

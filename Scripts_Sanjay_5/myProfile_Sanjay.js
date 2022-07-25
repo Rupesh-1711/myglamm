@@ -11,13 +11,18 @@ document.getElementById("displayAddress").addEventListener("click",()=>{
     document.querySelector(".personalInfo").classList.remove("DisplayInfo")
 })
 let userData=JSON.parse(localStorage.getItem("userDetails_P"))||[]
-document.getElementById("user_name").innerText=userData[0].name
-document.getElementById("u_name").innerText=userData[0].name
-document.getElementById("u_email").innerText=userData[0].emailId
-document.getElementById("u_number").innerText=userData[0].mobile
-document.getElementById("name").value=userData[0].name
-document.getElementById("number").value=userData[0].mobile
-document.getElementById("email").value=userData[0].emailId
+let verify=JSON.parse(localStorage.getItem("name"))||[]
+let filtered=userData.filter((el)=>{
+    return el.name==verify[0]
+})
+
+document.getElementById("user_name").innerText=filtered[0].name
+document.getElementById("u_name").innerText=filtered[0].name
+document.getElementById("u_email").innerText=filtered[0].emailId
+document.getElementById("u_number").innerText=filtered[0].mobile
+document.getElementById("name").value=filtered[0].name
+document.getElementById("number").value=filtered[0].mobile
+document.getElementById("email").value=filtered[0].emailId
 document.getElementById("update").addEventListener("click",()=>{
     let name=document.getElementById("name").value;
     let email=document.getElementById("email").value;
@@ -35,3 +40,6 @@ document.getElementById("update").addEventListener("click",()=>{
 document.getElementById("home").addEventListener("click",()=>{
     window.location.href="index_Sanjay-5.html"
 })
+document.getElementById("cart").addEventListener("click",()=>{
+    window.location.href="./Rupesh_cart_day5/cart5.html"
+ })

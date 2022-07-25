@@ -1,4 +1,5 @@
 let data = JSON.parse(localStorage.getItem("Inproduct"))
+let arr1 = JSON.parse(localStorage.getItem("data")) || [];
 console.log(data)
 
 let images = (data)=>{
@@ -85,8 +86,10 @@ let storedata= (el)=>{
        alert("This product is already in the Cart")
    }else{
     arr.push(el)
+    arr1.push(el)
     localStorage.setItem("data",JSON.stringify(arr)); 
     alert ("Product added to the cart successfully")
+    localStorage.setItem("liveOrders",JSON.stringify(arr1))
     //    window.location.href= "productDetails.html"
    }
  

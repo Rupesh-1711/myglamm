@@ -17,6 +17,7 @@ payMoney.addEventListener("click",function(){
    if( inputNumber.length==19 &&inputName!="" && month>0 && month<=12 && year >=22){
      alert("Order Placed successfully")
      localStorage.setItem("completedOrders",JSON.stringify(arr))
+     localStorage.setItem("liveOrders",JSON.stringify([]))
      window.location.href = "../index_Sanjay-5.html"
    }
    else
@@ -24,6 +25,7 @@ payMoney.addEventListener("click",function(){
     alert("Invalid Inputs")
    }
 })
+
 
 
 
