@@ -38,7 +38,7 @@ document.getElementById("update").addEventListener("click",()=>{
     window.location.reload()
 })
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index_Sanjay-5.html"
+    window.location.href="index.html"
 })
 document.getElementById("cart").addEventListener("click",()=>{
     window.location.href="./Rupesh_cart_day5/cart5.html"

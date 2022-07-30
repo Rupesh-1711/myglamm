@@ -14,7 +14,7 @@ let container= document.getElementById("container");
 append(data,container);
 // productdetails(el);
 document.getElementById("home").addEventListener("click",()=>{
-    window.location.href="index_Sanjay-5.html"
+    window.location.href="index.html"
 })
 import { navbar,displayUserName,footer } from "../Components_5/navbar_Sanjay.js";
 document.getElementById("navbar").innerHTML=navbar()
