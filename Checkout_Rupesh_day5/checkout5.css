@@ -262,10 +262,11 @@ nav{
 .rigthDiv{
     width: 428.663px;
     height: 524.412px;
-    padding:19px;
+    padding:40px;
     margin-bottom: 20px;
     background-color: #f7f7f7;
     /* border: 1px solid hsl(0, 0%, 0%); */
+    margin-right: 80px;
 }
 h1{
     font-size: 28px;
@@ -563,5 +564,4 @@ align-items: center;
     font-size: 14px;
     padding-top: 20px;
   }
-
   

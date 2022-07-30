@@ -802,7 +802,7 @@ a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
-    gap: 15px 15px;
+    gap: 15px;
     width: 90%;
     margin: auto;
     font-family: din-2014, sans-serif;
@@ -813,10 +813,11 @@ a{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px;
+    /* border: 1px solid teal; */
 }
 #details_2>div>img{
-    width: 60%;
-    height: 50%;
+    width: 100%;
+    /* height: 100%; */
 }
 #details_2>div>p:first-child{
     font-size: 14px;
@@ -828,4 +829,19 @@ a{
 }
 .style{
     border-bottom: 2px solid black;
+}
+.latest{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 15px 15px;
+    width: 90%;
+    margin: auto;
+    font-family: din-2014, sans-serif;
+    margin-top: 20px;
+}
+.latest>div img+p{
+    font-size: 12px;
+    font-weight: 300;
 }

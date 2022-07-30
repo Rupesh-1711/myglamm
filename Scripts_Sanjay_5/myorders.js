@@ -28,6 +28,7 @@ document.getElementById("comp").addEventListener("click",()=>{
     {
         document.getElementById("details_2").innerHTML=""
         let container_2=document.getElementById("details_1")
+        container_2.innerHTML=""
         let spanTag=document.createElement("span")
         let p1=document.createElement("p")
         p1.innerText=`There are no completed orders, We have some recommended products for you`
@@ -39,6 +40,8 @@ document.getElementById("comp").addEventListener("click",()=>{
     else
     {
         let container=document.getElementById("details_2")
+        container.setAttribute("class","latest")
+        container.innerHTML=""
         document.getElementById("details_1").innerHTML=""
             completed.forEach((el)=>{
                 let card=document.createElement("div")
@@ -60,6 +63,7 @@ document.getElementById("liv").addEventListener("click",()=>{
     {
         document.getElementById("details_2").innerHTML=""
         let containerLive=document.getElementById("details_1")
+        containerLive.innerHTML=""
         let spanTag=document.createElement("span")
         let p1=document.createElement("p")
         p1.innerText=`There are no live orders, We have some recommended products for you`
@@ -72,6 +76,7 @@ document.getElementById("liv").addEventListener("click",()=>{
     {
         document.getElementById("details_1").innerHTML=""
         let container=document.getElementById("details_2")
+        container.innerHTML=""
         live.forEach((el)=>{
             let card=document.createElement("div")
             let image=document.createElement("img")
@@ -99,6 +104,8 @@ let displayLive=()=>{
     }
     else
     {
+        let container=document.getElementById("details_2")
+        container.setAttribute("class","latest")
         live.forEach((el)=>{
             let card=document.createElement("div")
             let image=document.createElement("img")
