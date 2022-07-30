@@ -16,14 +16,22 @@ append(cdata,container);
 document.getElementById("navbar").innerHTML=navbar()
 document.getElementById("footer").innerHTML=footer()
 displayUserName()
+let dataFromLs = JSON.parse(localStorage.getItem("userDetails"))||[];
 document.getElementById("cart").addEventListener("click",()=>{
-    window.location.href="./Rupesh_cart_day5/cart5.html"
+    if(dataFromLs.length==0)
+    {
+        alert("Please login!!")
+    }
+    else{
+        window.location.href="./Rupesh_cart_day5/cart5.html"
+    }
+    
  })
  document.getElementById("home").addEventListener("click",()=>{
     window.location.href="index.html"
 })
-document.getElementById("cart").addEventListener("click",()=>{
-    window.location.href="./Rupesh_cart_day5/cart5.html"
- })
+// document.getElementById("cart").addEventListener("click",()=>{
+//     window.location.href="./Rupesh_cart_day5/cart5.html"
+//  })
 
 

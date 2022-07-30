@@ -1,4 +1,4 @@
-
+let dataFromLs = JSON.parse(localStorage.getItem("userDetails"))||[];
 function append(data,container){
 
 
@@ -26,7 +26,14 @@ data.forEach(function(el){
 //  document.getElementById("container").append(div);
 container.append(div);
  div.addEventListener("click",function(){
-   productdetails(el)
+   if(dataFromLs.length==0)
+   {
+      alert("Please login")
+   }
+   else
+   {
+      productdetails(el)
+   }
  });
 });
 }

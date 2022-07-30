@@ -685,3 +685,6 @@ ul li:hover .drop5 {
     text-align: center;
     cursor: pointer;
 }
+#cart{
+    cursor: pointer;
+}

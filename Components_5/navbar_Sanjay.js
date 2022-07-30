@@ -471,7 +471,7 @@ let footer=()=>{
         localStorage.setItem("userDetails",JSON.stringify([]))
         localStorage.setItem("name",JSON.stringify([]))
         window.location.reload()
-        window.location.href="index_Sanjay-5.html"
+        window.location.href="index.html"
       }
   
 export {navbar,footer,displayUserName}

@@ -1251,6 +1251,9 @@ input::-webkit-inner-spin-button {
     text-align: center;
     cursor: pointer;
 }
+#cart{
+    cursor: pointer;
+}
 /* .options{
     border: none;
     outline: none;
